@@ -155,6 +155,8 @@
     // convert it to a string
     NSString *dateString = [dateFormat stringFromDate:date];
     
+    //Get today's Hijri date
+    
     // free up memory
     // [dateFormat release];
     
@@ -206,6 +208,10 @@
           (long)[hijriComponents day],
           (long)[hijriComponents month],
           (long)[hijriComponents year]);
+    
+    NSString *hijriDateFormat = [NSString stringWithFormat:@"\n%d, %d %d", (int)[hijriComponents day], [hijriComponents month], [hijriComponents year]];
+    
+    self.headerDate.text = [self.headerDate.text stringByAppendingString:hijriDateFormat];
     
    
 }

@@ -18,6 +18,10 @@
 		C84832981810483A0082FAEB /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C84832971810483A0082FAEB /* Default-568h@2x.png */; };
 		C848329B1810483A0082FAEB /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C84832991810483A0082FAEB /* MainStoryboard.storyboard */; };
 		C848329E1810483A0082FAEB /* XYZViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C848329D1810483A0082FAEB /* XYZViewController.m */; };
+		C8DD359E1812E7B700608DE1 /* touch-icon-ipad-retina.png in Resources */ = {isa = PBXBuildFile; fileRef = C8DD359A1812E7B700608DE1 /* touch-icon-ipad-retina.png */; };
+		C8DD359F1812E7B700608DE1 /* touch-icon-ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = C8DD359B1812E7B700608DE1 /* touch-icon-ipad.png */; };
+		C8DD35A01812E7B700608DE1 /* touch-icon-iphone-retina.png in Resources */ = {isa = PBXBuildFile; fileRef = C8DD359C1812E7B700608DE1 /* touch-icon-iphone-retina.png */; };
+		C8DD35A11812E7B700608DE1 /* touch-icon-iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = C8DD359D1812E7B700608DE1 /* touch-icon-iphone.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +41,10 @@
 		C848329A1810483A0082FAEB /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		C848329C1810483A0082FAEB /* XYZViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYZViewController.h; sourceTree = "<group>"; };
 		C848329D1810483A0082FAEB /* XYZViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYZViewController.m; sourceTree = "<group>"; };
+		C8DD359A1812E7B700608DE1 /* touch-icon-ipad-retina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "touch-icon-ipad-retina.png"; sourceTree = "<group>"; };
+		C8DD359B1812E7B700608DE1 /* touch-icon-ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "touch-icon-ipad.png"; sourceTree = "<group>"; };
+		C8DD359C1812E7B700608DE1 /* touch-icon-iphone-retina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "touch-icon-iphone-retina.png"; sourceTree = "<group>"; };
+		C8DD359D1812E7B700608DE1 /* touch-icon-iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "touch-icon-iphone.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +64,10 @@
 		C84832751810483A0082FAEB = {
 			isa = PBXGroup;
 			children = (
+				C8DD359A1812E7B700608DE1 /* touch-icon-ipad-retina.png */,
+				C8DD359B1812E7B700608DE1 /* touch-icon-ipad.png */,
+				C8DD359C1812E7B700608DE1 /* touch-icon-iphone-retina.png */,
+				C8DD359D1812E7B700608DE1 /* touch-icon-iphone.png */,
 				C84832871810483A0082FAEB /* CalendarStepper */,
 				C84832801810483A0082FAEB /* Frameworks */,
 				C848327F1810483A0082FAEB /* Products */,
@@ -164,6 +176,10 @@
 				C84832961810483A0082FAEB /* Default@2x.png in Resources */,
 				C84832981810483A0082FAEB /* Default-568h@2x.png in Resources */,
 				C848329B1810483A0082FAEB /* MainStoryboard.storyboard in Resources */,
+				C8DD359E1812E7B700608DE1 /* touch-icon-ipad-retina.png in Resources */,
+				C8DD359F1812E7B700608DE1 /* touch-icon-ipad.png in Resources */,
+				C8DD35A01812E7B700608DE1 /* touch-icon-iphone-retina.png in Resources */,
+				C8DD35A11812E7B700608DE1 /* touch-icon-iphone.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,6 +315,7 @@
 				C84832A31810483A0082FAEB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

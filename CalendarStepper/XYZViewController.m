@@ -150,7 +150,7 @@
     
     // format it
     NSDateFormatter *dateFormat = [[NSDateFormatter alloc]init];
-    [dateFormat setDateFormat:@"MMMM d, y - HH:mm:ss zzz"];
+    [dateFormat setDateFormat:@"MMMM d, y \n HH:mm:ss zzz"];
     
     // convert it to a string
     NSString *dateString = [dateFormat stringFromDate:date];

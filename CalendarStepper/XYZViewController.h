@@ -27,6 +27,7 @@
 - (void)writeGDate;
 - (int) intPart: (float) floatNum;
 - (void) islToChr;
+- (NSString *)StringFromDate:(NSDate *)DateLocal;
 
 
 
@@ -40,5 +41,18 @@
 @property (weak, nonatomic) IBOutlet UIStepper *hYChanged;
 
 
+
+@property (weak) NSTimer *repeatingTimer;
+
+
+@property (nonatomic, weak) NSString *dateString;
+@property (nonatomic, strong) NSDateFormatter *dateFormat;
+@property (nonatomic, weak) NSDate *date, *currentDate, *sevenDaysAgo, *cdate;
+@property (nonatomic, weak) NSDateComponents *dateComponents;
+@property (nonatomic, weak) NSCalendar *gregorianCalendar;
+@property (nonatomic, weak) NSDateComponents *gregorianComponents;
+@property (nonatomic, weak) NSCalendar *hijriCalendar;
+@property (nonatomic, weak) NSDateComponents *hijriComponents;
+@property (nonatomic, weak) NSString *hijriDateFormat;
 
 @end

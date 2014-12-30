@@ -131,7 +131,7 @@
                                 <color key="highlightedColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.25796732349749635" green="0.73250159438775508" blue="0.32024981724993951" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.20000000000000001" green="0.80000000000000004" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="FR5-5L-w81" firstAttribute="top" secondItem="xHb-xy-GnY" secondAttribute="bottom" constant="8" symbolic="YES" id="0IB-fx-cEX"/>

@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4C4C89281A533CF500DE39DA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4C4C89271A533CF500DE39DA /* Localizable.strings */; };
+		4C4C892C1A53420B00DE39DA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4C4C892E1A53420B00DE39DA /* Localizable.strings */; };
 		C84832821810483A0082FAEB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C84832811810483A0082FAEB /* UIKit.framework */; };
 		C84832841810483A0082FAEB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C84832831810483A0082FAEB /* Foundation.framework */; };
 		C84832861810483A0082FAEB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C84832851810483A0082FAEB /* CoreGraphics.framework */; };
@@ -26,7 +26,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4C4C89271A533CF500DE39DA /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		4C4C89291A5341CB00DE39DA /* ar */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = ar; path = ar.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		4C4C892A1A5341CB00DE39DA /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		4C4C892B1A5341DD00DE39DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		4C4C892F1A53422400DE39DA /* en */ = {isa = PBXFileReference; lastKnownFileType = file; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		4C4C89301A53422600DE39DA /* ar */ = {isa = PBXFileReference; lastKnownFileType = file; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
 		C848327E1810483A0082FAEB /* CalendarStepper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CalendarStepper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C84832811810483A0082FAEB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C84832831810483A0082FAEB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -40,7 +44,6 @@
 		C84832931810483A0082FAEB /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		C84832951810483A0082FAEB /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		C84832971810483A0082FAEB /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		C848329A1810483A0082FAEB /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		C848329C1810483A0082FAEB /* XYZViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYZViewController.h; sourceTree = "<group>"; };
 		C848329D1810483A0082FAEB /* XYZViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYZViewController.m; sourceTree = "<group>"; };
 		C8DD359A1812E7B700608DE1 /* touch-icon-ipad-retina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "touch-icon-ipad-retina.png"; sourceTree = "<group>"; };
@@ -100,7 +103,7 @@
 				C84832901810483A0082FAEB /* XYZAppDelegate.h */,
 				C84832911810483A0082FAEB /* XYZAppDelegate.m */,
 				C84832991810483A0082FAEB /* MainStoryboard.storyboard */,
-				4C4C89271A533CF500DE39DA /* Localizable.strings */,
+				4C4C892E1A53420B00DE39DA /* Localizable.strings */,
 				C848329C1810483A0082FAEB /* XYZViewController.h */,
 				C848329D1810483A0082FAEB /* XYZViewController.m */,
 				C84832881810483A0082FAEB /* Supporting Files */,
@@ -158,6 +161,8 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				ar,
+				Base,
 			);
 			mainGroup = C84832751810483A0082FAEB;
 			productRefGroup = C848327F1810483A0082FAEB /* Products */;
@@ -179,7 +184,7 @@
 				C84832961810483A0082FAEB /* Default@2x.png in Resources */,
 				C84832981810483A0082FAEB /* Default-568h@2x.png in Resources */,
 				C848329B1810483A0082FAEB /* MainStoryboard.storyboard in Resources */,
-				4C4C89281A533CF500DE39DA /* Localizable.strings in Resources */,
+				4C4C892C1A53420B00DE39DA /* Localizable.strings in Resources */,
 				C8DD359E1812E7B700608DE1 /* touch-icon-ipad-retina.png in Resources */,
 				C8DD359F1812E7B700608DE1 /* touch-icon-ipad.png in Resources */,
 				C8DD35A01812E7B700608DE1 /* touch-icon-iphone-retina.png in Resources */,
@@ -203,10 +208,20 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		4C4C892E1A53420B00DE39DA /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4C4C892F1A53422400DE39DA /* en */,
+				4C4C89301A53422600DE39DA /* ar */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		C848328A1810483A0082FAEB /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
 				C848328B1810483A0082FAEB /* en */,
+				4C4C892A1A5341CB00DE39DA /* ar */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -214,7 +229,8 @@
 		C84832991810483A0082FAEB /* MainStoryboard.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				C848329A1810483A0082FAEB /* en */,
+				4C4C89291A5341CB00DE39DA /* ar */,
+				4C4C892B1A5341DD00DE39DA /* Base */,
 			);
 			name = MainStoryboard.storyboard;
 			sourceTree = "<group>";

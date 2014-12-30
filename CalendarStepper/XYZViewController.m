@@ -42,7 +42,7 @@
 
 - (void)viewDidLoad
 {
-    islamicCalendar.text = [NSString stringWithFormat:NSLocalizedString(@"Islamic Calendar", nil)];
+    islamicCalendar.text = [NSString stringWithFormat:NSLocalizedString(@"Islamic Calendar", @"")];
     gregorianCalendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
     
     hijriCalendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSIslamicCivilCalendar];

@@ -14,7 +14,7 @@
 
 @implementation XYZViewController
 
-@synthesize dateFormat;
+@synthesize dateFormat, islamicCalendar;
 @synthesize dateString, date, currentDate, sevenDaysAgo, cdate, dateComponents, gregorianCalendar, gregorianComponents, hijriCalendar, hijriComponents, hijriDateFormat, repeatingTimer;
 
 
@@ -42,6 +42,7 @@
 
 - (void)viewDidLoad
 {
+    islamicCalendar.text = [NSString stringWithFormat:NSLocalizedString(@"Islamic Calendar", nil)];
     gregorianCalendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
     
     hijriCalendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSIslamicCivilCalendar];

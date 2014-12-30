@@ -197,6 +197,7 @@
                         <outlet property="hYChanged" destination="aRM-EX-3vx" id="JFw-Sx-3A7"/>
                         <outlet property="hYearLabel" destination="lzS-18-uRD" id="cMf-W6-heh"/>
                         <outlet property="headerDate" destination="MGL-Yu-RuX" id="I5d-G6-QZD"/>
+                        <outlet property="islamicCalendar" destination="xHb-xy-GnY" id="lDP-6b-u0f"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>

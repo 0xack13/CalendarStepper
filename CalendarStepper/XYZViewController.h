@@ -29,6 +29,7 @@
 - (void) islToChr;
 - (NSString *)StringFromDate:(NSDate *)DateLocal;
 
+@property (weak, nonatomic) IBOutlet UILabel *islamicCalendar;
 
 
 @property (weak, nonatomic) IBOutlet UIStepper *gDChanged;

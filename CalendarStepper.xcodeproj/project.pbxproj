@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C4C89281A533CF500DE39DA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4C4C89271A533CF500DE39DA /* Localizable.strings */; };
 		C84832821810483A0082FAEB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C84832811810483A0082FAEB /* UIKit.framework */; };
 		C84832841810483A0082FAEB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C84832831810483A0082FAEB /* Foundation.framework */; };
 		C84832861810483A0082FAEB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C84832851810483A0082FAEB /* CoreGraphics.framework */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4C4C89271A533CF500DE39DA /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		C848327E1810483A0082FAEB /* CalendarStepper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CalendarStepper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C84832811810483A0082FAEB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C84832831810483A0082FAEB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -98,6 +100,7 @@
 				C84832901810483A0082FAEB /* XYZAppDelegate.h */,
 				C84832911810483A0082FAEB /* XYZAppDelegate.m */,
 				C84832991810483A0082FAEB /* MainStoryboard.storyboard */,
+				4C4C89271A533CF500DE39DA /* Localizable.strings */,
 				C848329C1810483A0082FAEB /* XYZViewController.h */,
 				C848329D1810483A0082FAEB /* XYZViewController.m */,
 				C84832881810483A0082FAEB /* Supporting Files */,
@@ -176,6 +179,7 @@
 				C84832961810483A0082FAEB /* Default@2x.png in Resources */,
 				C84832981810483A0082FAEB /* Default-568h@2x.png in Resources */,
 				C848329B1810483A0082FAEB /* MainStoryboard.storyboard in Resources */,
+				4C4C89281A533CF500DE39DA /* Localizable.strings in Resources */,
 				C8DD359E1812E7B700608DE1 /* touch-icon-ipad-retina.png in Resources */,
 				C8DD359F1812E7B700608DE1 /* touch-icon-ipad.png in Resources */,
 				C8DD35A01812E7B700608DE1 /* touch-icon-iphone-retina.png in Resources */,

@@ -17,7 +17,7 @@
 @synthesize dateFormat, islamicCalendar;
 @synthesize dateString, date, currentDate, sevenDaysAgo, cdate, dateComponents, gregorianCalendar, gregorianComponents, hijriCalendar, hijriComponents, hijriDateFormat, repeatingTimer;
 
-
+/*
 - (NSDateFormatter *)dateFormat {
     NSLog(@"Entered getter!\n");
 
@@ -29,7 +29,7 @@
         dateFormat.dateFormat = @"MMMM d, y \n HH:mm";
     });
     return dateFormat;
-}
+}*/
 /*
 - (NSDateFormatter *)dateFormat {
     if (dateFormat == nil) {
@@ -48,8 +48,8 @@
     
     hijriCalendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSIslamicCivilCalendar];
     
-   // dateFormat = [[NSDateFormatter alloc] init];
-    //[dateFormat setDateFormat:@"MMMM d, y \n HH:mm:ss zzz"];
+    dateFormat = [[NSDateFormatter alloc] init];
+    [dateFormat setDateFormat:@"MMMM d, y \n HH:mm"];
     
     [super viewDidLoad];
 	
@@ -87,11 +87,10 @@
     // Set up components of a Gregorian date
     gregorianComponents = [[NSCalendar currentCalendar] components:NSDayCalendarUnit | NSMonthCalendarUnit | NSYearCalendarUnit fromDate:[NSDate date]];
     
-    /*NSLog(@"[In Gregorian calendar ->] Day: %ld, Month: %ld, Year:%ld",
+    NSLog(@"[In Gregorian calendar ->] Day: %ld, Month: %ld, Year:%ld",
      (long)[gregorianComponents day],
      (long)[gregorianComponents month],
      (long)[gregorianComponents year]);
-     */
     
     gregorianComponents.day = [gregorianComponents day];
     gregorianComponents.month = [gregorianComponents month];
@@ -103,35 +102,41 @@
     
     
     // Then create an Islamic calendar
+    // Create the date
+    NSDate *date = [gregorianCalendar dateFromComponents:gregorianComponents];
     
+    
+    
+    // Then create an Islamic calendar
+    NSCalendar *hijriCalendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSIslamicCivilCalendar];
     
     
     // And grab those date components for the same date
     hijriComponents = [hijriCalendar components:(NSDayCalendarUnit |
                                                  NSMonthCalendarUnit |
                                                  NSYearCalendarUnit)
-                                       fromDate:cdate];
+                                       fromDate:[NSDate date]];
     
     
-    /*
+    
      NSLog(@"[In Hijri calendar ->] Day: %ld, Month: %ld, Year:%ld",
      (long)[hijriComponents day],
      (long)[hijriComponents month],
      (long)[hijriComponents year]);
-     */
+    
     hijriDateFormat = [NSString stringWithFormat:@"\n%d, %d %d", (int)[hijriComponents day], [hijriComponents month], [hijriComponents year]];
     
-    //self.headerDate.text = [self.headerDate.text stringByAppendingString:hijriDateFormat];
+    self.headerDate.text = [self.headerDate.text stringByAppendingString:hijriDateFormat];
     
     // Do any additional setup after loading the view, typically from a nib.
     // get the current date
     
-    repeatingTimer = [NSTimer scheduledTimerWithTimeInterval: 1.0
+    /*repeatingTimer = [NSTimer scheduledTimerWithTimeInterval: 1.0
                                                   target: self
                                    selector: @selector(showHeaderDate:)
                                                 userInfo: nil
                                                  repeats: YES];
-    
+    */
     
     // Set up components of a Gregorian date
     NSDateComponents *gregorianComponents = [[NSCalendar currentCalendar] components:NSDayCalendarUnit | NSMonthCalendarUnit | NSYearCalendarUnit fromDate:[NSDate date]];

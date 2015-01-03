@@ -25,7 +25,8 @@
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         dateFormat = [[NSDateFormatter alloc] init];
-        dateFormat.dateFormat = @"EEE MMM dd HH:mm:ss Z yyyy"; // twitter date format
+        //dateFormat.dateFormat = @"EEE MMM dd HH:mm:ss Z yyyy"; // twitter date format
+        dateFormat.dateFormat = @"MMMM d, y \n HH:mm";
     });
     return dateFormat;
 }
@@ -120,7 +121,7 @@
      */
     hijriDateFormat = [NSString stringWithFormat:@"\n%d, %d %d", (int)[hijriComponents day], [hijriComponents month], [hijriComponents year]];
     
-    self.headerDate.text = [self.headerDate.text stringByAppendingString:hijriDateFormat];
+    //self.headerDate.text = [self.headerDate.text stringByAppendingString:hijriDateFormat];
     
     // Do any additional setup after loading the view, typically from a nib.
     // get the current date

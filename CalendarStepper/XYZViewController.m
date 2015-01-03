@@ -14,8 +14,8 @@
 
 @implementation XYZViewController
 
-@synthesize dateFormat, islamicCalendar;
-@synthesize dateString, date, currentDate, sevenDaysAgo, cdate, dateComponents, gregorianCalendar, gregorianComponents, hijriCalendar, hijriComponents, hijriDateFormat, repeatingTimer;
+
+@synthesize dateString, date, currentDate, sevenDaysAgo, cdate, dateComponents, gregorianCalendar, gregorianComponents, hijriCalendar, hijriComponents, hijriDateFormat, repeatingTimer, dateFormat, islamicCalendar;
 
 /*
 - (NSDateFormatter *)dateFormat {

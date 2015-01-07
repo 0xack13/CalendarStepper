@@ -118,7 +118,6 @@
                                        fromDate:[NSDate date]
                                          ];
     
-    NSDate *november4th2012 = [calendar dateFromComponents:hijriComponents];
 
     
      NSLog(@"[In Hijri calendar ->] Day: %ld, Month: %ld, Year:%ld",
@@ -126,7 +125,17 @@
      (long)[hijriComponents month],
      (long)[hijriComponents year]);
     
-    hijriDateFormat = [NSString stringWithFormat:@"\n%d, %d %d", (int)[hijriComponents day], [hijriComponents month], [hijriComponents year]];
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateStyle:NSDateFormatterShortStyle];
+    [dateFormatter setLocale:[NSLocale currentLocale]];
+    [dateFormatter setDateFormat:@"dd, mm yyyy"];
+
+    NSString *testStr = [NSString stringWithFormat:@"\n%d, %d %d", (int)[hijriComponents day], [hijriComponents month], [hijriComponents year]];
+    
+    NSDate *mydate = [dateFormat dateFromString:testStr];
+
+    
+    hijriDateFormat = [dateFormatter stringFromDate:mydate];
     
     /*
     NSNumberFormatter *numberFormatter = [[NSNumberFormatter alloc] init];

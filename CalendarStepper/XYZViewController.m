@@ -115,9 +115,11 @@
     hijriComponents = [hijriCalendar components:(NSDayCalendarUnit |
                                                  NSMonthCalendarUnit |
                                                  NSYearCalendarUnit)
-                                       fromDate:[NSDate date]];
+                                       fromDate:[NSDate date]
+                                         ];
     
-    
+    NSDate *november4th2012 = [calendar dateFromComponents:hijriComponents];
+
     
      NSLog(@"[In Hijri calendar ->] Day: %ld, Month: %ld, Year:%ld",
      (long)[hijriComponents day],
@@ -126,7 +128,24 @@
     
     hijriDateFormat = [NSString stringWithFormat:@"\n%d, %d %d", (int)[hijriComponents day], [hijriComponents month], [hijriComponents year]];
     
+    /*
+    NSNumberFormatter *numberFormatter = [[NSNumberFormatter alloc] init];
+    [numberFormatter setNumberStyle:NSNumberFormatterDecimalStyle];
+    NSString *formattedNumberString = [numberFormatter stringFromNumber:@122344.4563];
+    NSLog(@"formattedNumberString: %@", formattedNumberString);
+    
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateStyle:NSDateFormatterMediumStyle];
+    [dateFormatter setTimeStyle:NSDateFormatterNoStyle];
+    
+    NSDate *date = [NSDate dateWithTimeIntervalSinceReferenceDate:162000];
+    
+    NSString *formattedDateString = [dateFormatter stringFromDate:date];
+    NSLog(@"formattedDateString: %@", formattedDateString);
+    */
+    
     self.headerDate.text = [self.headerDate.text stringByAppendingString:hijriDateFormat];
+    
     
     // Do any additional setup after loading the view, typically from a nib.
     // get the current date

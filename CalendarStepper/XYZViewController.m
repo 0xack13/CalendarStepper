@@ -128,14 +128,18 @@
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setDateStyle:NSDateFormatterShortStyle];
     [dateFormatter setLocale:[NSLocale currentLocale]];
-    [dateFormatter setDateFormat:@"dd, mm yyyy"];
+    [dateFormatter setDateFormat:@"d m y"];
 
-    NSString *testStr = [NSString stringWithFormat:@"\n%d, %d %d", (int)[hijriComponents day], [hijriComponents month], [hijriComponents year]];
+    NSString *testStr = [NSString stringWithFormat:@"%d %d %d", (int)[hijriComponents day], [hijriComponents month], [hijriComponents year]];
+    
+    NSLog(@"Test: %@", testStr);
     
     NSDate *mydate = [dateFormat dateFromString:testStr];
-
     
-    hijriDateFormat = [dateFormatter stringFromDate:mydate];
+    NSLog(@"Test: %@", [dateFormatter stringFromDate:mydate]);
+    
+    
+    //hijriDateFormat = [dateFormatter stringFromDate:mydate];
     
     /*
     NSNumberFormatter *numberFormatter = [[NSNumberFormatter alloc] init];
@@ -153,7 +157,7 @@
     NSLog(@"formattedDateString: %@", formattedDateString);
     */
     
-    self.headerDate.text = [self.headerDate.text stringByAppendingString:hijriDateFormat];
+    //self.headerDate.text = [self.headerDate.text stringByAppendingString:hijriDateFormat];
     
     
     // Do any additional setup after loading the view, typically from a nib.

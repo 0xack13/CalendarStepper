@@ -128,15 +128,38 @@
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setDateStyle:NSDateFormatterShortStyle];
     [dateFormatter setLocale:[NSLocale currentLocale]];
-    [dateFormatter setDateFormat:@"d m y"];
+    [dateFormatter setDateFormat:@"d/M/yyyy"];
 
-    NSString *testStr = [NSString stringWithFormat:@"%d %d %d", (int)[hijriComponents day], [hijriComponents month], [hijriComponents year]];
+    NSString *testStr = [NSString stringWithFormat:@"%d/%d/%d", (int)[hijriComponents day], [hijriComponents month], [hijriComponents year]];
     
-    NSLog(@"Test: %@", testStr);
+    NSLog(@"Test Str: %@", testStr);
     
+    //testStr = @"2/3/2006";
+
     NSDate *mydate = [dateFormat dateFromString:testStr];
     
     NSLog(@"Test: %@", [dateFormatter stringFromDate:mydate]);
+    
+    NSLocale* currentLoc = [NSLocale currentLocale];
+    NSLog(@"%@",[mydate descriptionWithLocale:currentLoc]);
+    
+    
+    NSDate* datee = [NSDate date];
+    NSString* datePart = [NSDateFormatter localizedStringFromDate: datee
+                                                        dateStyle: NSDateFormatterShortStyle
+                                                        timeStyle: NSDateFormatterNoStyle];
+    NSString* timePart = [NSDateFormatter localizedStringFromDate: datee
+                                                        dateStyle: NSDateFormatterNoStyle
+                                                        timeStyle: NSDateFormatterShortStyle];
+    NSLog(@"Month Day: %@", datePart);
+    NSLog(@"Hours Min: %@", timePart);
+    
+    
+    NSString *dateStr = testStr;
+    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+    [dateFormat setDateFormat:@"d/M/yyyy"];
+    NSDate *dateee = [dateFormat dateFromString:dateStr];
+    NSLog(@"my date: %@",dateee);
     
     
     //hijriDateFormat = [dateFormatter stringFromDate:mydate];
@@ -158,6 +181,7 @@
     */
     
     //self.headerDate.text = [self.headerDate.text stringByAppendingString:hijriDateFormat];
+    self.headerDate.text = [self.headerDate.text stringByAppendingString:[dateFormat stringFromDate:dateee]];
     
     
     // Do any additional setup after loading the view, typically from a nib.

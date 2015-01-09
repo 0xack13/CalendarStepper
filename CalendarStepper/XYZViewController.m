@@ -49,7 +49,7 @@
     hijriCalendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSIslamicCivilCalendar];
     
     dateFormat = [[NSDateFormatter alloc] init];
-    [dateFormat setDateFormat:@"MMMM d, y \n HH:mm"];
+    [dateFormat setDateFormat:@"MMMM d, y \n"];
     
     [super viewDidLoad];
 	

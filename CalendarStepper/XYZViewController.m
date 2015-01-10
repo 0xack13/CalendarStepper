@@ -1,3 +1,11 @@
+//
+//  XYZViewController.m
+//  CalendarStepper
+//
+//  Created by Saleh Albatati on 10/17/13.
+//  Copyright (c) 2013 SaudiERP. All rights reserved.
+//
+
 #import "XYZViewController.h"
 
 @interface XYZViewController ()
@@ -8,6 +16,30 @@
 
 
 @synthesize dateString, date, currentDate, sevenDaysAgo, cdate, dateComponents, gregorianCalendar, gregorianComponents, hijriCalendar, hijriComponents, hijriDateFormat, repeatingTimer, dateFormat, islamicCalendar;
+
+/*
+- (NSDateFormatter *)dateFormat {
+    NSLog(@"Entered getter!\n");
+
+    static NSDateFormatter *dateFormat;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        dateFormat = [[NSDateFormatter alloc] init];
+        //dateFormat.dateFormat = @"EEE MMM dd HH:mm:ss Z yyyy"; // twitter date format
+        dateFormat.dateFormat = @"MMMM d, y \n HH:mm";
+    });
+    return dateFormat;
+}*/
+/*
+- (NSDateFormatter *)dateFormat {
+    if (dateFormat == nil) {
+        NSLog(@"Entered getter!\n");
+        dateFormat = [[NSDateFormatter alloc] init];
+        [dateFormat setDateFormat:@"MMMM d, y \n HH:mm:ss zzz"];
+    }
+    
+    return dateFormat;
+}*/
 
 - (void)viewDidLoad
 {
@@ -22,12 +54,37 @@
     [super viewDidLoad];
 	
     date = [NSDate date];
-
+    // format it
+    //dateFormat = [[NSDateFormatter alloc]init];
+    //[dateFormat setDateFormat:@"MMMM d, y \n HH:mm:ss zzz"];
+    
+    // convert it to a string
     @autoreleasepool {
         self.headerDate.text =  [self.dateFormat stringFromDate:date];
         
     }
     
+    
+    //Get today's Hijri date
+    
+    // free up memory
+    // [dateFormat release];
+    
+    // update a label’s text
+    
+    // ** substract two dates
+    //currentDate = [NSDate date];
+    //dateComponents = [[NSDateComponents alloc] init];
+    //[dateComponents setDay:-7];
+    //sevenDaysAgo = [[NSCalendar currentCalendar] dateByAddingComponents:dateComponents toDate:currentDate options:0];
+    //NSLog(@"\ncurrentDate: %@\nseven days ago: %@", currentDate, sevenDaysAgo);
+    
+    // ** Set Hijri Date
+    //self.hDate.text = [NSString stringWithFormat: @"\ncurrentDate: %@\nseven days ago: %@", currentDate, sevenDaysAgo];
+    
+    // Create a Gregorian Calendar
+    
+    // Set up components of a Gregorian date
     gregorianComponents = [[NSCalendar currentCalendar] components:NSDayCalendarUnit | NSMonthCalendarUnit | NSYearCalendarUnit fromDate:[NSDate date]];
     
     NSLog(@"[In Gregorian calendar ->] Day: %ld, Month: %ld, Year:%ld",
@@ -42,12 +99,17 @@
     // Create the date
     cdate = [gregorianCalendar dateFromComponents:gregorianComponents];
     
+    
+    
     // Then create an Islamic calendar
     // Create the date
     NSDate *date = [gregorianCalendar dateFromComponents:gregorianComponents];
     
+    
+    
     // Then create an Islamic calendar
     NSCalendar *hijriCalendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSIslamicCivilCalendar];
+    
     
     // And grab those date components for the same date
     hijriComponents = [hijriCalendar components:(NSDayCalendarUnit |
@@ -72,6 +134,8 @@
     
     NSLog(@"Test Str: %@", testStr);
     
+    //testStr = @"2/3/2006";
+
     NSDate *mydate = [dateFormat dateFromString:testStr];
     
     NSLog(@"Test: %@", [dateFormatter stringFromDate:mydate]);
@@ -97,11 +161,47 @@
     NSDate *dateee = [dateFormat dateFromString:dateStr];
     NSLog(@"my date: %@",dateee);
     
+    
+    //hijriDateFormat = [dateFormatter stringFromDate:mydate];
+    
+    /*
+    NSNumberFormatter *numberFormatter = [[NSNumberFormatter alloc] init];
+    [numberFormatter setNumberStyle:NSNumberFormatterDecimalStyle];
+    NSString *formattedNumberString = [numberFormatter stringFromNumber:@122344.4563];
+    NSLog(@"formattedNumberString: %@", formattedNumberString);
+    
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateStyle:NSDateFormatterMediumStyle];
+    [dateFormatter setTimeStyle:NSDateFormatterNoStyle];
+    
+    NSDate *date = [NSDate dateWithTimeIntervalSinceReferenceDate:162000];
+    
+    NSString *formattedDateString = [dateFormatter stringFromDate:date];
+    NSLog(@"formattedDateString: %@", formattedDateString);
+    */
+    
+    //self.headerDate.text = [self.headerDate.text stringByAppendingString:hijriDateFormat];
     self.headerDate.text = [self.headerDate.text stringByAppendingString:[dateFormat stringFromDate:dateee]];
- 
+    
+    
+    // Do any additional setup after loading the view, typically from a nib.
+    // get the current date
+    
+    /*repeatingTimer = [NSTimer scheduledTimerWithTimeInterval: 1.0
+                                                  target: self
+                                   selector: @selector(showHeaderDate:)
+                                                userInfo: nil
+                                                 repeats: YES];
+    */
+    
     // Set up components of a Gregorian date
     NSDateComponents *gregorianComponents = [[NSCalendar currentCalendar] components:NSDayCalendarUnit | NSMonthCalendarUnit | NSYearCalendarUnit fromDate:[NSDate date]];
- 
+   /*
+    NSLog(@"Initialized &&& [In Gregorian calendar ->] Day: %ld, Month: %ld, Year:%ld",
+          (long)[gregorianComponents day],
+          (long)[gregorianComponents month],
+          (long)[gregorianComponents year]);
+    */
     self.gDayLabel.text = [NSString stringWithFormat: @"%d", [gregorianComponents day]];
     self.gMonthLabel.text = [NSString stringWithFormat: @"%d", [gregorianComponents month]];
     self.gYearLabel.text = [NSString stringWithFormat: @"%d", [gregorianComponents year]];

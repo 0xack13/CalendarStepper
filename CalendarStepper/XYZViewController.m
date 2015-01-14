@@ -55,11 +55,12 @@
     
 	
     date = [NSDate date];
+    //NSDate mydate = [NSDate date];
     // format it
-    dateFormat = [[NSDateFormatter alloc]init];
-    [dateFormat setDateFormat:@"MMMM d, y \n HH:mm:ss zzz"];
-    
-    self.headerDate.text = [dateFormat stringFromDate:date];
+    //dateFormat = [[NSDateFormatter alloc]init];
+    //[dateFormat setDateFormat:@"MMMM d, y \n HH:mm:ss zzz"];
+    NSLog(@"date is: %@", [self.dateFormat stringFromDate:date]);
+    self.headerDate.text = [self.dateFormat stringFromDate:date];
     
     
     //Get today's Hijri date

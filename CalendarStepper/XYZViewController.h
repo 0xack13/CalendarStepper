@@ -48,7 +48,7 @@
 
 @property (nonatomic, weak) NSString *dateString;
 @property (nonatomic, strong) NSDateFormatter *dateFormat;
-@property (nonatomic, weak) NSDate *date, *currentDate, *sevenDaysAgo, *cdate;
+@property (nonatomic, strong) NSDate *date, *currentDate, *sevenDaysAgo, *cdate;
 @property (nonatomic, weak) NSDateComponents *dateComponents;
 @property (nonatomic, strong) NSCalendar *gregorianCalendar;
 @property (nonatomic, weak) NSDateComponents *gregorianComponents;

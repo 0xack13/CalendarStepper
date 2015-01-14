@@ -50,9 +50,9 @@
 @property (nonatomic, strong) NSDateFormatter *dateFormat;
 @property (nonatomic, weak) NSDate *date, *currentDate, *sevenDaysAgo, *cdate;
 @property (nonatomic, weak) NSDateComponents *dateComponents;
-@property (nonatomic, weak) NSCalendar *gregorianCalendar;
+@property (nonatomic, strong) NSCalendar *gregorianCalendar;
 @property (nonatomic, weak) NSDateComponents *gregorianComponents;
-@property (nonatomic, weak) NSCalendar *hijriCalendar;
+@property (nonatomic, strong) NSCalendar *hijriCalendar;
 @property (nonatomic, weak) NSDateComponents *hijriComponents;
 @property (nonatomic, weak) NSString *hijriDateFormat;
 

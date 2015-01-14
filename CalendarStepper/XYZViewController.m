@@ -43,6 +43,8 @@
 
 - (void)viewDidLoad
 {
+    [super viewDidLoad];
+
     islamicCalendar.text = [NSString stringWithFormat:NSLocalizedString(@"Islamic Calendar", @"")];
     gregorianCalendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
     
@@ -51,18 +53,13 @@
     dateFormat = [[NSDateFormatter alloc] init];
     [dateFormat setDateFormat:@"MMMM d, y \n"];
     
-    [super viewDidLoad];
 	
     date = [NSDate date];
     // format it
-    //dateFormat = [[NSDateFormatter alloc]init];
-    //[dateFormat setDateFormat:@"MMMM d, y \n HH:mm:ss zzz"];
+    dateFormat = [[NSDateFormatter alloc]init];
+    [dateFormat setDateFormat:@"MMMM d, y \n HH:mm:ss zzz"];
     
-    // convert it to a string
-    @autoreleasepool {
-        self.headerDate.text =  [self.dateFormat stringFromDate:date];
-        
-    }
+    self.headerDate.text = [dateFormat stringFromDate:date];
     
     
     //Get today's Hijri date
@@ -103,7 +100,7 @@
     
     // Then create an Islamic calendar
     // Create the date
-    NSDate *date = [gregorianCalendar dateFromComponents:gregorianComponents];
+    //NSDate *date = [gregorianCalendar dateFromComponents:gregorianComponents];
     
     
     
